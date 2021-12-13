@@ -15,11 +15,16 @@ public class ClasseExecutavel {
 		aluno1.setRegistroGerla("482144428");
 		aluno1.setNumeroCpf("14141257890");
 		aluno1.setNomeMae("Maria Jose do Alto");
-		aluno1.setNomePai("Antoni Jose");
+		aluno1.setNomePai("Antonio Jose");
 		aluno1.setDataMatricula("5/2/2020");
 		aluno1.setNomeEscola("Uninove");
 		aluno1.setSerieMatriculado("TADS-26");
 		
+		System.out.println(" Aluno = " + aluno1.getNome() + "\n" + " Idade = " + aluno1.getIdade() + 
+				"\n" + " Nascimento = " + aluno1.getDataNascimento() + "\n" + " Rg = " + aluno1.getRegistroGerla() +
+				"\n" + " CPF = " + aluno1.getNumeroCpf() + "\n" + " nome da Mãe = " + aluno1.getNomeMae() +
+				"\n" + " Nome do Pai = " + aluno1.getNomePai() + "\n" + " Matriculado em = " + aluno1.getDataMatricula() +
+				"\n" + " Escola = " + aluno1.getNomeEscola() + "\n" + " Serie matricula = " + aluno1.getSerieMatriculado());
 	}
 
 }
