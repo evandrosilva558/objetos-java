@@ -20,11 +20,19 @@ public class ClasseExecutavel {
 		aluno1.setNomeEscola("Uninove");
 		aluno1.setSerieMatriculado("TADS-26");
 		
+		aluno1.setNota1(90);
+		aluno1.setNota2(70.7);
+		aluno1.setNota3(80);
+		aluno1.setNota4(60);
+		
+		// acessando os dados do aluno com o metodo get e imprimindo no console.
+		
 		System.out.println(" Aluno = " + aluno1.getNome() + "\n" + " Idade = " + aluno1.getIdade() + 
 				"\n" + " Nascimento = " + aluno1.getDataNascimento() + "\n" + " Rg = " + aluno1.getRegistroGerla() +
 				"\n" + " CPF = " + aluno1.getNumeroCpf() + "\n" + " nome da Mãe = " + aluno1.getNomeMae() +
 				"\n" + " Nome do Pai = " + aluno1.getNomePai() + "\n" + " Matriculado em = " + aluno1.getDataMatricula() +
-				"\n" + " Escola = " + aluno1.getNomeEscola() + "\n" + " Serie matricula = " + aluno1.getSerieMatriculado());
+				"\n" + " Escola = " + aluno1.getNomeEscola() + "\n" + " Serie matricula = " + aluno1.getSerieMatriculado() +
+				"\n" + "Média do aluno =" + aluno1.getMediaNota());
 	}
 
 }
