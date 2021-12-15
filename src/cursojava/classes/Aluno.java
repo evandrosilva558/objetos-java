@@ -82,14 +82,6 @@ public class Aluno {
 		this.numeroCpf = numeroCpf;
 	}
 
-	public String getRegistroGerla() {
-		return registroGeral;
-	}
-
-	public void setRegistroGerla(String registroGerla) {
-		this.registroGeral = registroGerla;
-	}
-
 	public String getDataNascimento() {
 		return dataNascimento;
 	}
