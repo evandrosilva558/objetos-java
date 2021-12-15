@@ -56,7 +56,7 @@ public class ClasseExecutavel {
 		
 		// opção de ver os dados e as notas do aluno.
 		
-		int resultado = JOptionPane.showConfirmDialog(null, "Deseja ver a quantidade de carros por Pessoa ?");
+		int resultado = JOptionPane.showConfirmDialog(null, "Deseja ver a média e os dados do aluno ?");
 		
 		// condicional caso 0 == sim imprime os dados e a média do aluno.
 		
