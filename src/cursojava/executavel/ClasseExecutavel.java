@@ -22,6 +22,7 @@ public class ClasseExecutavel {
 		aluno1.setNomeEscola("Uninove");
 		aluno1.setSerieMatriculado("TADS-26");
 		
+		
 		// setando as notas do aluno.
 		
 		/*aluno1.setNota1(90);
@@ -29,20 +30,34 @@ public class ClasseExecutavel {
 		aluno1.setNota3(80);
 		aluno1.setNota4(60);*/
 		
+		// obtando as notas do aluno pelo imput.
+		
 		String notaA = JOptionPane.showInputDialog("Informa a primaira nota ?");
 		String notaB = JOptionPane.showInputDialog("Informa a segunda nota ?");
 		String notaC = JOptionPane.showInputDialog("Informa a terçeira nota ?");
 		String notaD = JOptionPane.showInputDialog("Informa a quarta nota ?");
+		
+		// convertendo as notas de Strings para double.
 		
 		aluno1.setNota1(Double.parseDouble(notaA));
 		aluno1.setNota2(Double.parseDouble(notaB));
 		aluno1.setNota3(Double.parseDouble(notaC));
 		aluno1.setNota4(Double.parseDouble(notaD));
 		
-		int resultado = JOptionPane.showConfirmDialog(null, "Deseja ver a média do aluno ?");
+		// opção de visualização da média e os dados do aluno..
+		
+		int resultado = JOptionPane.showConfirmDialog(null, "Deseja ver a média e os dados do aluno ?");
+		
+		// condicional caso 0 == sim imprime os dados e a média do aluno.
 		
 		if (resultado == 0) {
 			JOptionPane.showMessageDialog(null, "A média do aluno é = " + aluno1.getMediaNota());
+			JOptionPane.showMessageDialog(null, " Aluno = " + aluno1.getNome() + "\n" + " Idade = " + aluno1.getIdade() + 
+					"\n" + " Nascimento = " + aluno1.getDataNascimento() + "\n" + " Rg = " + aluno1.getRegistroGerla() +
+					"\n" + " CPF = " + aluno1.getNumeroCpf() + "\n" + " nome da Mãe = " + aluno1.getNomeMae() +
+					"\n" + " Nome do Pai = " + aluno1.getNomePai() + "\n" + " Matriculado em = " + aluno1.getDataMatricula() +
+					"\n" + " Escola = " + aluno1.getNomeEscola() + "\n" + " Serie matricula = " + aluno1.getSerieMatriculado() +
+					"\n" + " Média do aluno = " + aluno1.getMediaNota() + " : " + (aluno1.getAprovado() ? "Aprovado" : "Reprovado"));
 		}
 		
 		// acessando os dados do aluno com o metodo get e imprimindo no console.
@@ -52,7 +67,7 @@ public class ClasseExecutavel {
 				"\n" + " CPF = " + aluno1.getNumeroCpf() + "\n" + " nome da Mãe = " + aluno1.getNomeMae() +
 				"\n" + " Nome do Pai = " + aluno1.getNomePai() + "\n" + " Matriculado em = " + aluno1.getDataMatricula() +
 				"\n" + " Escola = " + aluno1.getNomeEscola() + "\n" + " Serie matricula = " + aluno1.getSerieMatriculado() +
-				"\n" + "Média do aluno = " + aluno1.getMediaNota());
+				"\n" + " Média do aluno = " + aluno1.getMediaNota() + " : " + (aluno1.getAprovado() ? "Aprovado" : "Reprovado"));
 	}
 
 }

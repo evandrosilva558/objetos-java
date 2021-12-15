@@ -152,4 +152,14 @@ public class Aluno {
 		return (nota1 + nota2 + nota3 + nota4) / 4;
 	}
 	
+	// metodo de retorno true ou false no calculo da media.
+	
+	public boolean getAprovado() {
+		double media = this.getMediaNota();
+		if (media >= 70) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
