@@ -1,5 +1,7 @@
 package cursojava.executavel;
 
+import javax.swing.JOptionPane;
+
 import cursojava.classes.Aluno;
 
 public class ClasseExecutavel {
@@ -20,10 +22,28 @@ public class ClasseExecutavel {
 		aluno1.setNomeEscola("Uninove");
 		aluno1.setSerieMatriculado("TADS-26");
 		
-		aluno1.setNota1(90);
+		// setando as notas do aluno.
+		
+		/*aluno1.setNota1(90);
 		aluno1.setNota2(70.7);
 		aluno1.setNota3(80);
-		aluno1.setNota4(60);
+		aluno1.setNota4(60);*/
+		
+		String notaA = JOptionPane.showInputDialog("Informa a primaira nota ?");
+		String notaB = JOptionPane.showInputDialog("Informa a segunda nota ?");
+		String notaC = JOptionPane.showInputDialog("Informa a terçeira nota ?");
+		String notaD = JOptionPane.showInputDialog("Informa a quarta nota ?");
+		
+		aluno1.setNota1(Double.parseDouble(notaA));
+		aluno1.setNota2(Double.parseDouble(notaB));
+		aluno1.setNota3(Double.parseDouble(notaC));
+		aluno1.setNota4(Double.parseDouble(notaD));
+		
+		int resultado = JOptionPane.showConfirmDialog(null, "Deseja ver a média do aluno ?");
+		
+		if (resultado == 0) {
+			JOptionPane.showMessageDialog(null, "A média do aluno é = " + aluno1.getMediaNota());
+		}
 		
 		// acessando os dados do aluno com o metodo get e imprimindo no console.
 		
@@ -32,7 +52,7 @@ public class ClasseExecutavel {
 				"\n" + " CPF = " + aluno1.getNumeroCpf() + "\n" + " nome da Mãe = " + aluno1.getNomeMae() +
 				"\n" + " Nome do Pai = " + aluno1.getNomePai() + "\n" + " Matriculado em = " + aluno1.getDataMatricula() +
 				"\n" + " Escola = " + aluno1.getNomeEscola() + "\n" + " Serie matricula = " + aluno1.getSerieMatriculado() +
-				"\n" + "Média do aluno =" + aluno1.getMediaNota());
+				"\n" + "Média do aluno = " + aluno1.getMediaNota());
 	}
 
 }

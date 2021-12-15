@@ -2,7 +2,7 @@ package cursojava.classes;
 
 public class Aluno {
 	
-	//	stributos da classe.
+	//	stributos da classe Aluno.
 	
 	private String nome;
 	private int idade;
@@ -15,12 +15,12 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	
+	// referênciando as notas do objeto aluno.
 	
 	double nota1;
 	double nota2;
 	double nota3;
 	double nota4;
-	
 	
 	// methodos Getters e Setters recebe e obtem os valores do objeto Aluno.
 	// Set = seta os valores recebe valor.
@@ -151,4 +151,5 @@ public class Aluno {
 	public double getMediaNota() {
 		return (nota1 + nota2 + nota3 + nota4) / 4;
 	}
+	
 }
