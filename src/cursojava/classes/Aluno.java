@@ -1,5 +1,7 @@
 package cursojava.classes;
 
+import java.util.Objects;
+
 public class Aluno {
 	
 	//	stributos da classe Aluno.
@@ -154,4 +156,45 @@ public class Aluno {
 			return false;
 		}
 	}
+
+	// utilização de toString para facilitar o retorno dos dados do objeto aluno.
+	
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
+				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
+				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
+				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
+				+ "]";
+	}
+	
+	// Equals e hashcode para compara a igualdade dos objetos se os valores de um objeto é igual a outro.
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dataMatricula, dataNascimento, idade, nome, nomeEscola, nomeMae, nomePai, nota1, nota2,
+				nota3, nota4, numeroCpf, registroGeral, serieMatriculado);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		return Objects.equals(dataMatricula, other.dataMatricula)
+				&& Objects.equals(dataNascimento, other.dataNascimento) && idade == other.idade
+				&& Objects.equals(nome, other.nome) && Objects.equals(nomeEscola, other.nomeEscola)
+				&& Objects.equals(nomeMae, other.nomeMae) && Objects.equals(nomePai, other.nomePai)
+				&& Double.doubleToLongBits(nota1) == Double.doubleToLongBits(other.nota1)
+				&& Double.doubleToLongBits(nota2) == Double.doubleToLongBits(other.nota2)
+				&& Double.doubleToLongBits(nota3) == Double.doubleToLongBits(other.nota3)
+				&& Double.doubleToLongBits(nota4) == Double.doubleToLongBits(other.nota4)
+				&& Objects.equals(numeroCpf, other.numeroCpf) && Objects.equals(registroGeral, other.registroGeral)
+				&& Objects.equals(serieMatriculado, other.serieMatriculado);
+	}
+	
 }

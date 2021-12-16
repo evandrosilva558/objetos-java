@@ -59,8 +59,9 @@ public class ClasseExecutavel {
 		int resultado = JOptionPane.showConfirmDialog(null, "Deseja ver a média e os dados do aluno ?");
 		
 		// condicional caso 0 == sim imprime os dados e a média do aluno.
+		// imprimindo os dados na tela.
 		
-		if (resultado == 0) {
+		if (resultado == 0) {	
 			JOptionPane.showMessageDialog(null, " Aluno = " + aluno1.getNome() + "\n" + " Idade = " + aluno1.getIdade() + 
 					"\n" + " Nascimento = " + aluno1.getDataNascimento() + "\n" + " Rg = " + aluno1.getRegistroGeral() +
 					"\n" + " CPF = " + aluno1.getNumeroCpf() + "\n" + " nome da Mãe = " + aluno1.getNomeMae() +
@@ -69,14 +70,9 @@ public class ClasseExecutavel {
 					"\n" + " Média do aluno = " + aluno1.getMediaNota() + " : " + (aluno1.getAprovado() ? "Aprovado" : "Reprovado"));
 		}
 		
-		// acessando os dados do aluno com o metodo get e imprimindo no console.
+		// utilizando tosString para imprimir os dados do objeto de forma mais simplificada tambem imprime os dados do objeto aluno.
 		
-		System.out.println(" Aluno = " + aluno1.getNome() + "\n" + " Idade = " + aluno1.getIdade() + 
-				"\n" + " Nascimento = " + aluno1.getDataNascimento() + "\n" + " Rg = " + aluno1.getRegistroGeral() +
-				"\n" + " CPF = " + aluno1.getNumeroCpf() + "\n" + " nome da Mãe = " + aluno1.getNomeMae() +
-				"\n" + " Nome do Pai = " + aluno1.getNomePai() + "\n" + " Matriculado em = " + aluno1.getDataMatricula() +
-				"\n" + " Escola = " + aluno1.getNomeEscola() + "\n" + " Serie matricula = " + aluno1.getSerieMatriculado() +
-				"\n" + " Média do aluno = " + aluno1.getMediaNota() + " : " + (aluno1.getAprovado() ? "Aprovado" : "Reprovado"));
+		System.out.println(aluno1.toString());
 	}
 
 }
